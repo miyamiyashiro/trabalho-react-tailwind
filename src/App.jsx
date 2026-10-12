@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar.jsx'
 import Alert from './components/Alert.jsx'
 import PricingCard from './components/PricingCard.jsx'
 import KpiCard from './components/KpiCard.jsx'
@@ -107,12 +108,17 @@ export default function App() {
           <h2 id="titulo-08" className="mt-2 mb-6 text-2xl font-bold">Alert / Notification</h2>
           <div className="max-w-2xl space-y-4"><Alert variant="success" title="Success">Your changes were saved.</Alert><Alert variant="warning" title="Warning">Please review your information.</Alert><Alert variant="error" title="Error" actionLabel="Retry">Something went wrong. Try again later.</Alert><Alert variant="info" title="Information">A new update is available.</Alert></div>
         </section>
+        <section id="exercicio-09" aria-labelledby="titulo-09" className="mt-8 scroll-mt-6 rounded-3xl border border-slate-200 bg-white p-4 sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-wider text-blue-700">Exercise 09</p>
+          <h2 id="titulo-09" className="mt-2 mb-6 text-2xl font-bold">Responsive Navbar</h2>
+          <Navbar /><p className="mt-4 text-sm text-slate-500">No celular, os links ficam visíveis em uma segunda linha. Menu é apenas visual nesta etapa; não abre nem fecha conteúdo.</p>
+        </section>
         <h2 className="mt-10 text-xl font-bold">Roteiro dos exercícios</h2>
         <ol className="mt-4 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white">
           {exercises.map((exercise, index) => (
             <li key={exercise} className="flex flex-wrap items-center justify-between gap-3 p-4">
               <span className="font-semibold"><span className="mr-3 text-slate-400">{String(index + 1).padStart(2, '0')}</span>{exercise}</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 8 ? 'Implementado' : 'A fazer'}</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 9 ? 'Implementado' : 'A fazer'}</span>
             </li>
           ))}
         </ol>
