@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@theme { --color-primary: #2563eb; --color-success: #15803d; }
+/* inline permite resolver os aliases dentro de cada seção .dark. */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-chestnut: var(--chestnut);
+}
+:root {
+  --background: #ffffff; --surface: #f4f4f5; --foreground: #18181b;
+  --muted: #52525b; --border: #e4e4e7; --chestnut: #973f29;
+}
+.dark {
+  --background: #15155a; --surface: #18181b; --foreground: #fafafa;
+  --muted: #a1a1aa; --border: #52525b; --chestnut: #d9785f;
+}
+@layer components {
+  .custom-colors { @apply rounded-xl bg-chestnut p-4 text-center font-bold text-white dark:text-zinc-950; }
+  .token-card { @apply rounded-2xl border border-border bg-surface p-5 text-foreground; }
+}
+

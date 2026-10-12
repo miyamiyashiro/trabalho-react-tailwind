@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theme Toggle</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@theme { --color-primary: #2563eb; --color-success: #15803d; }
+/* inline permite resolver os aliases dentro de cada seção .dark. */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-chestnut: var(--chestnut);
+}
+:root {
+  --background: #ffffff; --surface: #f4f4f5; --foreground: #18181b;
+  --muted: #52525b; --border: #e4e4e7; --chestnut: #973f29;
+}
+.dark {
+  --background: #15155a; --surface: #18181b; --foreground: #fafafa;
+  --muted: #a1a1aa; --border: #52525b; --chestnut: #d9785f;
+}
+@layer components {
+  .custom-colors { @apply rounded-xl bg-chestnut p-4 text-center font-bold text-white dark:text-zinc-950; }
+  .token-card { @apply rounded-2xl border border-border bg-surface p-5 text-foreground; }
+}
+</style>
+</head>
+<body>
+<main class="grid min-h-screen place-items-center bg-background p-6 text-foreground transition-colors duration-500">
+  <section class="w-full max-w-2xl rounded-3xl border border-border bg-background p-6 shadow-xl transition-colors duration-500 sm:p-8">
+    <header class="flex flex-wrap items-center justify-between gap-5">
+      <div><span class="text-sm font-bold uppercase tracking-widest text-primary dark:text-blue-300">Theme Lab</span><h1 class="mt-2 text-3xl font-black">Light &amp; Dark Mode</h1></div>
+      <button type="button" aria-label="Tema escuro" aria-pressed="false" onclick="document.documentElement.classList.toggle('dark'); this.setAttribute('aria-pressed', document.documentElement.classList.contains('dark'))" class="flex items-center gap-3 rounded-full border border-border bg-surface px-4 py-3 text-sm font-bold transition-colors duration-500 hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 dark:hover:brightness-125">
+        <span aria-hidden="true" class="relative h-6 w-11 rounded-full bg-slate-400 transition-colors dark:bg-violet-500"><span class="absolute top-1 left-1 size-4 rounded-full bg-white transition-transform dark:translate-x-5"></span></span>
+        <span class="dark:hidden">☾ Dark mode</span><span class="hidden dark:inline">☀ Light mode</span>
+      </button>
+    </header>
+    <p class="mt-6 leading-7 text-muted">O mesmo componente muda de aparência sem trocar sua estrutura HTML.</p>
+    <div class="token-card mt-6 transition-colors duration-500"><strong>Surface token</strong><p class="mt-2 text-muted">Background e texto respondem ao tema.</p></div>
+    <span class="mt-4 inline-block rounded-full border border-border bg-surface px-3 py-1 text-sm font-semibold text-foreground transition-colors duration-500">Badge · Tema adaptável</span>
+    <aside aria-label="Informação sobre o tema" class="mt-4 rounded-xl border border-border bg-surface p-4 text-foreground transition-colors duration-500"><strong>Alert</strong><p class="mt-1 text-sm text-muted">Os tokens desta área também acompanham o tema.</p></aside>
+    <div class="custom-colors mt-4 transition-colors duration-500">Chestnut</div>
+    <button type="button" class="mt-6 rounded-xl bg-primary px-5 py-3 font-semibold text-white hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">Primary Button</button>
+  </section>
+</main>
+</body>
+</html>
