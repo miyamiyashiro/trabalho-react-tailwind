@@ -29,9 +29,9 @@ As dependências já foram instaladas neste computador. Se copiar o projeto para
 3. Profile Card — implementado
 4. Product Card — implementado
 5. Login Form — implementado
-6. KPI Card
-7. Pricing Card
-8. Alert / Notification
+6. KPI Card — implementado
+7. Pricing Card — implementado
+8. Alert / Notification — implementado
 9. Responsive Navbar
 10. Mini Dashboard
 
