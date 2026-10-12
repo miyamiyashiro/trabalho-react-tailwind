@@ -1,3 +1,5 @@
+import PricingCard from './components/PricingCard.jsx'
+import KpiCard from './components/KpiCard.jsx'
 import LoginForm from './components/LoginForm.jsx'
 import InputField from './components/InputField.jsx'
 import ProductCard from './components/ProductCard.jsx'
@@ -81,12 +83,30 @@ export default function App() {
           <h2 id="titulo-05" className="mt-2 mb-6 text-2xl font-bold">Login Form</h2>
           <div className="grid items-start gap-6 lg:grid-cols-2"><LoginForm /><div className="rounded-2xl bg-slate-50 p-6"><h3 className="mb-4 font-bold">Desafio · erro por prop</h3><InputField id="demo-error-email" label="Email" type="email" placeholder="you@example.com" error="Email inválido" /><p className="mt-4 text-sm text-slate-500">A mensagem é fixa, recebida por prop. Não há validação JavaScript.</p></div></div>
         </section>
+        <section id="exercicio-06" aria-labelledby="titulo-06" className="mt-8 scroll-mt-6 rounded-3xl border border-slate-200 bg-white p-4 sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-wider text-blue-700">Exercise 06</p>
+          <h2 id="titulo-06" className="mt-2 mb-6 text-2xl font-bold">KPI Card</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+  <KpiCard label="Revenue" value="R$ 128.4k" change="+12.8%" comparison="vs previous period" trend="positive" />
+  <KpiCard label="Orders" value="1,842" change="-2.1%" comparison="vs previous period" trend="negative" icon="#" />
+  <KpiCard label="Conversion" value="4.7%" change="0.0%" comparison="vs previous period" trend="neutral" icon="%" />
+</div>
+        </section>
+        <section id="exercicio-07" aria-labelledby="titulo-07" className="mt-8 scroll-mt-6 rounded-3xl border border-slate-200 bg-white p-4 sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-wider text-blue-700">Exercise 07</p>
+          <h2 id="titulo-07" className="mt-2 mb-6 text-2xl font-bold">Pricing Card</h2>
+          <div className="grid gap-6 lg:grid-cols-3">
+  <PricingCard name="Free" price="$0" features={['1 project', 'Basic analytics', 'Community support']} />
+  <PricingCard name="Pro" price="$29" features={['Unlimited projects', 'Advanced analytics', 'Priority support']} highlighted />
+  <PricingCard name="Enterprise" price="$99" features={['Unlimited projects', 'Team access', 'Dedicated support']} />
+</div>
+        </section>
         <h2 className="mt-10 text-xl font-bold">Roteiro dos exercícios</h2>
         <ol className="mt-4 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white">
           {exercises.map((exercise, index) => (
             <li key={exercise} className="flex flex-wrap items-center justify-between gap-3 p-4">
               <span className="font-semibold"><span className="mr-3 text-slate-400">{String(index + 1).padStart(2, '0')}</span>{exercise}</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 5 ? 'Implementado' : 'A fazer'}</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 7 ? 'Implementado' : 'A fazer'}</span>
             </li>
           ))}
         </ol>
