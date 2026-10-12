@@ -1,3 +1,4 @@
+import ProductCard from './components/ProductCard.jsx'
 import ProfileCard from './components/ProfileCard.jsx'
 import Avatar from './components/Avatar.jsx'
 import Badge from './components/Badge.jsx'
@@ -64,12 +65,21 @@ export default function App() {
   <ProfileCard name="Luana Miyashiro" role="Estudante · FullStack Developer" initials="LM" category="Developer" description="Aprendendo a transformar interfaces em componentes reutilizáveis." layout="vertical" />
 </div>
         </section>
+        <section id="exercicio-04" aria-labelledby="titulo-04" className="mt-8 scroll-mt-6 rounded-3xl border border-slate-200 bg-white p-4 sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-wider text-blue-700">Exercise 04</p>
+          <h2 id="titulo-04" className="mt-2 mb-6 text-2xl font-bold">Product Card</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <ProductCard name="Velocity Runner" category="Running" description="Conforto e leveza para sua corrida diária." price="$129" badge="New" />
+  <ProductCard name="Urban Runner" category="Lifestyle" description="Um tênis versátil para acompanhar sua rotina." price="$99" badge="Popular" />
+  <ProductCard name="Trail Runner" category="Outdoor" description="Estabilidade para explorar novos caminhos." price="$149" badge="New" />
+</div>
+        </section>
         <h2 className="mt-10 text-xl font-bold">Roteiro dos exercícios</h2>
         <ol className="mt-4 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white">
           {exercises.map((exercise, index) => (
             <li key={exercise} className="flex flex-wrap items-center justify-between gap-3 p-4">
               <span className="font-semibold"><span className="mr-3 text-slate-400">{String(index + 1).padStart(2, '0')}</span>{exercise}</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 3 ? 'Implementado' : 'A fazer'}</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 4 ? 'Implementado' : 'A fazer'}</span>
             </li>
           ))}
         </ol>
