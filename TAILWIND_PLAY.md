@@ -1,13 +1,5 @@
 # Tailwind Play — exercícios 01 a 09
 
-Parte sem React. 01 e 02 são os arquivos da aula com pequenas correções. 03 a 09 foram implementados com apoio de IA a partir dos enunciados.
-
-## Como usar
-
-Abra https://play.tailwindcss.com/ com Tailwind v4. Copie o HTML e o CSS do mesmo exercício nos painéis correspondentes. Para visualizar localmente, abra `index.html` na raiz desta pasta e escolha um exercício (requer internet).
-
-Os arquivos por exercício são `index.html` (fragmento para Play), `style.css` e `preview.html` (página completa). Não foram criados links compartilhados do Play.
-
 ## 01 — Card de Perfil
 
 ### HTML
@@ -457,23 +449,5 @@ Grid organiza KPIs e áreas principais. `lg:grid-cols-[2fr_1fr]` divide o espaç
 
 O clique alterna `.dark` na tag `<html>`. Os tokens mudam seus valores, portanto `bg-background` muda sem receber outra classe. `dark:` aplica um estilo explicitamente no escuro. `dark:hidden` oculta o primeiro rótulo; `hidden dark:inline` revela o segundo. A transição suaviza cores. Challenge incluído: switch, Card, Badge e Alert sem duplicar paletas. `aria-pressed` comunica o estado. Não há persistência após recarregar.
 
-## Experimentos para praticar no Play
 
-Altere temporariamente as classes e depois restaure a solução. Não é necessário manter simultaneamente mudanças incompatíveis na versão final.
 
-- **03:** mude primary; altere chestnut apenas em `.dark`; remova `.dark`; experimente `md:grid-cols-2`. Success e segunda classe com @apply estão incluídos.
-- **04:** mude max-w, remova space-y, troque h-12 por h-14, compare sem ring, altere accent e radius. Navegue com Tab.
-- **05:** remova o deslocamento; teste ring-4 em lugar da borda, outra paleta, md:grid-cols-3 e outro tamanho de preço. Hover incluído nos três cards.
-- **06:** retire peer; mude cor checked, deslocamento e tamanho do switch; retire sr-only. Terceira preferência incluída.
-- **07:** altere open:bg, remova open:border, compare o marcador com list-none, mude space-y. Quarta pergunta e hover incluídos.
-- **08:** altere colunas e proporção 2fr/1fr, alturas e última cor; retire flex-1; mude max-w e experimente um quarto KPI.
-- **09 (obrigatórios no enunciado):** clique repetidamente e observe `.dark` em `<html>`; retire transition-colors; troque duration-500 por duration-1000; remova separadamente dark:hidden e hidden dark:inline e observe os rótulos. O switch escuro já usa violeta. Experimente outros valores de background e chestnut em `.dark`. Área adicional bg-surface, variante dark e challenge incluídos.
-
-## Referências e limites
-
-- [Enunciados no Notion](https://deluxe-blue-bc1.notion.site/63adfca74d8d8335879301b920bc0e94?v=46bdfca74d8d82a087d808c36ce9d353)
-- [Theme variables e inline](https://tailwindcss.com/docs/theme)
-- [Dark mode](https://tailwindcss.com/docs/dark-mode)
-- [Estados](https://tailwindcss.com/docs/hover-focus-and-other-states)
-
-Os enunciados foram lidos. Figma não ficou acessível nesta sessão; não foi validada fidelidade pixel a pixel. As interfaces seguem os requisitos textuais e a paleta dos exemplos da aula. Os botões de contratar, seguir e exportar são demonstrativos. Login não transmite dados. FAQ, switches e tema funcionam localmente; não há backend nem persistência.
