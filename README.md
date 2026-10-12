@@ -1,6 +1,6 @@
 # Trabalho React + Tailwind — Luana
 
-Projeto de estudos com React, Vite e Tailwind CSS. A configuração inicial está pronta; os 10 exercícios React ainda serão desenvolvidos.
+Projeto de estudos com React, Vite e Tailwind CSS. A configuração inicial está pronta; o exercício 01 está implementado e os exercícios 02 a 10 estão pendentes.
 
 ## Abrir e executar no VS Code
 
@@ -22,9 +22,9 @@ As dependências já foram instaladas neste computador. Se copiar o projeto para
 - `TAILWIND_PLAY.md`: códigos da parte sem React, já preparada.
 - `tailwind-play/`: exemplos HTML/CSS e prévias da primeira parte.
 
-## Exercícios React pendentes
+## Progresso dos exercícios React
 
-1. Button System
+1. Button System — implementado (inclui desafio adicional)
 2. Badge + Avatar
 3. Profile Card
 4. Product Card
@@ -59,3 +59,20 @@ O Blackboard pede o link do repositório público no GitHub com TAILWIND_PLAY.md
 - [Enunciados React](https://deluxe-blue-bc1.notion.site/773dfca74d8d8341a03c016e0fb4127f?v=f19dfca74d8d83ad85f78829c00c9597)
 - [Tailwind com Vite](https://tailwindcss.com/docs/installation/using-vite)
 - [Vite](https://vite.dev/guide/)
+
+## Exercício 01 — Button System
+
+Arquivo: `src/components/Button.jsx`. Todos os exemplos da página reutilizam esse único componente, sem useState.
+
+- `children`: conteúdo entre as tags, como `<Button>Salvar</Button>`.
+- `variant`: escolhe primary, secondary, danger ou success em um mapa de classes completas. Não há construção de cores como `bg-${color}-500`.
+- `disabled`: ativa o atributo nativo disabled, impedindo ativação e retirando o botão da sequência de Tab.
+- `type`: padrão button, evitando envio acidental de formulários; aceita submit e reset quando necessário.
+- `size`: sm, md (padrão) ou lg. No padrão, h-11 = 44px, px-5 = 20px em cada lado e text-sm = 14px.
+- `fullWidth`: adiciona w-full para ocupar a largura do contêiner.
+
+`rounded-xl` dá raio de 12px e `font-semibold` define peso 600, com a escala padrão. `enabled:hover:` muda a cor apenas quando habilitado; `enabled:active:brightness-90` escurece durante o clique. `focus-visible:` desenha o contorno de teclado; `disabled:` reduz a opacidade e muda o cursor. Variantes desconhecidas usam primary; tamanhos desconhecidos usam md.
+
+Para conferir: passe o mouse, mantenha o clique pressionado, navegue com Tab e veja que Disabled não pode ser ativado. Teste a página em uma janela estreita. Os exemplos são estáticos, como pedido no enunciado.
+
+As medidas seguem a especificação textual do Notion. A fidelidade visual ao Figma ainda não foi conferida.
