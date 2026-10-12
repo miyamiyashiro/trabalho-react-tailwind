@@ -35,17 +35,6 @@ Requer Node.js 22.12+ ou 24 LTS e npm. Usamos npm.cmd no PowerShell para evitar 
 9. Responsive Navbar — implementado
 10. Mini Dashboard — implementado
 
-## Commits pelo VS Code
-
-Após concluir e conferir uma etapa:
-
-1. Abra **Controle do Código-Fonte** (Ctrl+Shift+G).
-2. Confira as alterações e clique em **+** ao lado dos arquivos para prepará-los.
-3. Escreva uma mensagem, por exemplo: `feat: adiciona Button com variantes`.
-4. Clique em **Commit**.
-
-Commit salva a etapa no Git local. Publicar/push envia os commits ao GitHub; o repositório deste trabalho já está conectado ao GitHub. Não adicione node_modules ou dist ao Git: o .gitignore já exclui essas pastas.
-
 ## Verificar compilação
 
 `npm.cmd run build`
