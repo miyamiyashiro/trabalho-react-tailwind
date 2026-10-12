@@ -50,10 +50,6 @@ Commit salva a etapa no Git local. Publicar/push envia os commits ao GitHub; o r
 
 `npm.cmd run build`
 
-## Entrega final
-
-O Blackboard pede o link do repositório público no GitHub com TAILWIND_PLAY.md, exercícios React, README, código organizado e histórico de commits. Antes da entrega, revise os exercícios, execute o build, envie seus commits e confira se o repositório no GitHub está público.
-
 ## Referências
 
 - [Enunciados React](https://deluxe-blue-bc1.notion.site/773dfca74d8d8341a03c016e0fb4127f?v=f19dfca74d8d83ad85f78829c00c9597)
