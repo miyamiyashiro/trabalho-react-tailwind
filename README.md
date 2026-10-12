@@ -1,6 +1,6 @@
 # Trabalho React + Tailwind — Luana
 
-Projeto de estudos com React, Vite e Tailwind CSS. A configuração inicial está pronta; o exercício 01 está implementado e os exercícios 02 a 10 estão pendentes.
+Projeto de estudos com React, Vite e Tailwind CSS. A configuração inicial está pronta; Acompanhe o progresso na lista abaixo e no guia de estudo em ESTUDO_REACT.md.
 
 ## Abrir e executar no VS Code
 
@@ -25,8 +25,8 @@ As dependências já foram instaladas neste computador. Se copiar o projeto para
 ## Progresso dos exercícios React
 
 1. Button System — implementado (inclui desafio adicional)
-2. Badge + Avatar
-3. Profile Card
+2. Badge + Avatar — implementado
+3. Profile Card — implementado
 4. Product Card
 5. Login Form
 6. KPI Card
@@ -52,7 +52,7 @@ Commit salva a etapa no Git local. Publicar/push envia os commits ao GitHub; ess
 
 ## Entrega final
 
-O Blackboard pede o link do repositório público no GitHub com TAILWIND_PLAY.md, exercícios React, README, código organizado e histórico de commits. Este projeto ainda não está pronto para entrega: faltam os exercícios React e a publicação.
+O Blackboard pede o link do repositório público no GitHub com TAILWIND_PLAY.md, exercícios React, README, código organizado e histórico de commits. Antes da entrega, revise os exercícios, execute o build, envie seus commits e confira se o repositório no GitHub está público.
 
 ## Referências
 

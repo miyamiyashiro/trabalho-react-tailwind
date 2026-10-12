@@ -1,3 +1,4 @@
+import ProfileCard from './components/ProfileCard.jsx'
 import Avatar from './components/Avatar.jsx'
 import Badge from './components/Badge.jsx'
 import Button from './components/Button.jsx'
@@ -55,12 +56,20 @@ export default function App() {
   <div className="flex items-center gap-4"><Avatar initials="LM" size="sm" /><Avatar initials="LM" /><Avatar initials="LM" size="lg" /></div>
 </div>
         </section>
+        <section id="exercicio-03" aria-labelledby="titulo-03" className="mt-8 scroll-mt-6 rounded-3xl border border-slate-200 bg-white p-4 sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-wider text-blue-700">Exercise 03</p>
+          <h2 id="titulo-03" className="mt-2 mb-6 text-2xl font-bold">Profile Card</h2>
+          <div className="grid gap-6 lg:grid-cols-2">
+  <ProfileCard name="Eduardo Inocencio" role="Professor · React · SPA" initials="EI" category="Front-end" description="Construindo interfaces reutilizáveis com React e Tailwind CSS." />
+  <ProfileCard name="Luana Miyashiro" role="Estudante · FullStack Developer" initials="LM" category="Developer" description="Aprendendo a transformar interfaces em componentes reutilizáveis." layout="vertical" />
+</div>
+        </section>
         <h2 className="mt-10 text-xl font-bold">Roteiro dos exercícios</h2>
         <ol className="mt-4 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white">
           {exercises.map((exercise, index) => (
             <li key={exercise} className="flex flex-wrap items-center justify-between gap-3 p-4">
               <span className="font-semibold"><span className="mr-3 text-slate-400">{String(index + 1).padStart(2, '0')}</span>{exercise}</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 2 ? 'Implementado' : 'A fazer'}</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 3 ? 'Implementado' : 'A fazer'}</span>
             </li>
           ))}
         </ol>
