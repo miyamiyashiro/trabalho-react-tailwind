@@ -28,7 +28,7 @@ As dependências já foram instaladas neste computador. Se copiar o projeto para
 2. Badge + Avatar — implementado
 3. Profile Card — implementado
 4. Product Card — implementado
-5. Login Form
+5. Login Form — implementado
 6. KPI Card
 7. Pricing Card
 8. Alert / Notification

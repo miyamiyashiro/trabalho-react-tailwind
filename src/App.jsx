@@ -1,3 +1,5 @@
+import LoginForm from './components/LoginForm.jsx'
+import InputField from './components/InputField.jsx'
 import ProductCard from './components/ProductCard.jsx'
 import ProfileCard from './components/ProfileCard.jsx'
 import Avatar from './components/Avatar.jsx'
@@ -74,12 +76,17 @@ export default function App() {
   <ProductCard name="Trail Runner" category="Outdoor" description="Estabilidade para explorar novos caminhos." price="$149" badge="New" />
 </div>
         </section>
+        <section id="exercicio-05" aria-labelledby="titulo-05" className="mt-8 scroll-mt-6 rounded-3xl border border-slate-200 bg-white p-4 sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-wider text-blue-700">Exercise 05</p>
+          <h2 id="titulo-05" className="mt-2 mb-6 text-2xl font-bold">Login Form</h2>
+          <div className="grid items-start gap-6 lg:grid-cols-2"><LoginForm /><div className="rounded-2xl bg-slate-50 p-6"><h3 className="mb-4 font-bold">Desafio · erro por prop</h3><InputField id="demo-error-email" label="Email" type="email" placeholder="you@example.com" error="Email inválido" /><p className="mt-4 text-sm text-slate-500">A mensagem é fixa, recebida por prop. Não há validação JavaScript.</p></div></div>
+        </section>
         <h2 className="mt-10 text-xl font-bold">Roteiro dos exercícios</h2>
         <ol className="mt-4 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white">
           {exercises.map((exercise, index) => (
             <li key={exercise} className="flex flex-wrap items-center justify-between gap-3 p-4">
               <span className="font-semibold"><span className="mr-3 text-slate-400">{String(index + 1).padStart(2, '0')}</span>{exercise}</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 4 ? 'Implementado' : 'A fazer'}</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 5 ? 'Implementado' : 'A fazer'}</span>
             </li>
           ))}
         </ol>
