@@ -1,16 +1,16 @@
 # Trabalho React + Tailwind — Luana
 
-Projeto de estudos com React, Vite e Tailwind CSS. A configuração inicial está pronta; Acompanhe o progresso na lista abaixo e no guia de estudo em ESTUDO_REACT.md.
+Projeto de estudos com React, Vite e Tailwind CSS. Os dez exercícios estão implementados. Veja as explicações de props e classes em [ESTUDO_REACT.md](ESTUDO_REACT.md).
 
 ## Abrir e executar no VS Code
 
 1. Abra esta pasta pelo menu **Arquivo > Abrir Pasta**.
 2. Abra **Terminal > Novo Terminal**.
-3. Digite `npm.cmd run dev` e pressione Enter.
+3. Na primeira execução, digite `npm.cmd ci` para instalar as dependências do arquivo de lock. Depois execute `npm.cmd run dev`.
 4. Abra o endereço Local informado pelo terminal (normalmente http://localhost:5173).
 5. Para encerrar o servidor, pressione Ctrl+C no terminal.
 
-As dependências já foram instaladas neste computador. Se copiar o projeto para outra máquina, execute `npm.cmd install` antes. Usamos npm.cmd no PowerShell para evitar bloqueio de scripts .ps1; não é preciso alterar as configurações de segurança.
+Requer Node.js 22.12+ ou 24 LTS e npm. Usamos npm.cmd no PowerShell para evitar bloqueio de scripts .ps1; não é preciso alterar as configurações de segurança.
 
 ## Arquivos principais
 
@@ -44,7 +44,7 @@ Após concluir e conferir uma etapa:
 3. Escreva uma mensagem, por exemplo: `feat: adiciona Button com variantes`.
 4. Clique em **Commit**.
 
-Commit salva a etapa no Git local. Publicar/push envia os commits ao GitHub; essa publicação será feita depois. Não adicione node_modules ou dist ao Git: o .gitignore já exclui essas pastas.
+Commit salva a etapa no Git local. Publicar/push envia os commits ao GitHub; o repositório deste trabalho já está conectado ao GitHub. Não adicione node_modules ou dist ao Git: o .gitignore já exclui essas pastas.
 
 ## Verificar compilação
 
@@ -76,3 +76,8 @@ Arquivo: `src/components/Button.jsx`. Todos os exemplos da página reutilizam es
 Para conferir: passe o mouse, mantenha o clique pressionado, navegue com Tab e veja que Disabled não pode ser ativado. Teste a página em uma janela estreita. Os exemplos são estáticos, como pedido no enunciado.
 
 As medidas seguem a especificação textual do Notion. A referência visual do [Figma — Button System](https://www.figma.com/design/68JGQxPGbW0d2xGDEBxya9?node-id=2-4) foi consultada: Secondary cinza, Disabled cinza e uma grade com três botões na primeira linha e Disabled na segunda. Abaixo de 480px, a grade vira uma coluna. A comparação foi visual, sem inspeção dos valores internos do Figma.
+## Escopo
+
+Os componentes React são estáticos, conforme os enunciados: os botões de login, compras, exportação e Retry são demonstrações visuais. O menu mobile possui links sempre visíveis, sem lógica de abrir/fechar. O modo escuro aparece em uma segunda composição do dashboard. Não há useState nem backend.
+
+Código desenvolvido com apoio de IA. As explicações de cada exercício estão em ESTUDO_REACT.md para revisão e apresentação.

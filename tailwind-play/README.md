@@ -4,7 +4,7 @@ Abra `index.html` no navegador e escolha um exercício. As prévias precisam de 
 
 Inclui exercícios 01 a 09, códigos, explicações e roteiro de experimentos. 01 e 02 são os trabalhos da aula com pequenas correções. 03 a 09 foram preparados com apoio de IA, conforme permitido na atividade. Revise os checkpoints e pratique para conseguir explicar as classes e decisões.
 
-A parte React + Tailwind ainda precisa ser desenvolvida. Publicação no GitHub, histórico de commits e envio ao Blackboard não foram realizados neste pacote. Não há backend; botões comerciais e Export são visuais. O formulário não envia credenciais.
+A parte React + Tailwind está na pasta src do repositório principal. Consulte o README da raiz para executar o projeto e ver os requisitos de entrega. Não há backend; botões comerciais e Export são visuais. O formulário não envia credenciais.
 
 ## Verificação
 

@@ -23,12 +23,12 @@ export default function App() {
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-bold uppercase tracking-widest text-blue-700">Luana · Laboratório de componentes</p>
         <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">React + Tailwind</h1>
-        <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">Ambiente pronto. Vamos construir os componentes, um exercício por vez.</p>
+        <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">Dez exercícios de componentes reutilizáveis com React, props e Tailwind CSS.</p>
         <section className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5" aria-label="Status do projeto">
-          <p className="font-bold text-emerald-900">Etapa atualizada</p>
-          <p className="mt-1 text-sm text-emerald-800">Confira os exemplos abaixo, leia as explicações e registre cada etapa no Git.</p>
+          <p className="font-bold text-emerald-900">Trilha de componentes concluída</p>
+          <p className="mt-1 text-sm text-emerald-800">Explore as variantes, os layouts responsivos e as versões clara e escura do dashboard.</p>
         </section>
-        <section aria-labelledby="button-title" className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+        <section id="exercicio-01" aria-labelledby="button-title" className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
           <span className="inline-block rounded-full bg-blue-50 px-2 py-1 text-[10px] font-bold uppercase text-blue-700">Exercise 01</span>
           <h2 id="button-title" className="mt-4 text-2xl font-bold">Button System</h2>
           <p className="mt-2 text-sm text-slate-500">Variants + hover/focus/disabled states</p>
@@ -124,7 +124,7 @@ export default function App() {
           {exercises.map((exercise, index) => (
             <li key={exercise} className="flex flex-wrap items-center justify-between gap-3 p-4">
               <span className="font-semibold"><span className="mr-3 text-slate-400">{String(index + 1).padStart(2, '0')}</span>{exercise}</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{index < 10 ? 'Implementado' : 'A fazer'}</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">Implementado</span>
             </li>
           ))}
         </ol>
