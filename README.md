@@ -71,8 +71,8 @@ Arquivo: `src/components/Button.jsx`. Todos os exemplos da página reutilizam es
 - `size`: sm, md (padrão) ou lg. No padrão, h-11 = 44px, px-5 = 20px em cada lado e text-sm = 14px.
 - `fullWidth`: adiciona w-full para ocupar a largura do contêiner.
 
-`rounded-xl` dá raio de 12px e `font-semibold` define peso 600, com a escala padrão. `enabled:hover:` muda a cor apenas quando habilitado; `enabled:active:brightness-90` escurece durante o clique. `focus-visible:` desenha o contorno de teclado; `disabled:` reduz a opacidade e muda o cursor. Variantes desconhecidas usam primary; tamanhos desconhecidos usam md.
+`rounded-xl` dá raio de 12px e `font-semibold` define peso 600, com a escala padrão. `enabled:hover:` muda a cor apenas quando habilitado; `enabled:active:brightness-90` escurece durante o clique. `focus-visible:` desenha o contorno de teclado; `disabled:` aplica fundo cinza, texto atenuado e cursor de indisponível. Variantes desconhecidas usam primary; tamanhos desconhecidos usam md.
 
 Para conferir: passe o mouse, mantenha o clique pressionado, navegue com Tab e veja que Disabled não pode ser ativado. Teste a página em uma janela estreita. Os exemplos são estáticos, como pedido no enunciado.
 
-As medidas seguem a especificação textual do Notion. A fidelidade visual ao Figma ainda não foi conferida.
+As medidas seguem a especificação textual do Notion. A referência visual do [Figma — Button System](https://www.figma.com/design/68JGQxPGbW0d2xGDEBxya9?node-id=2-4) foi consultada: Secondary cinza, Disabled cinza e uma grade com três botões na primeira linha e Disabled na segunda. Abaixo de 480px, a grade vira uma coluna. A comparação foi visual, sem inspeção dos valores internos do Figma.
